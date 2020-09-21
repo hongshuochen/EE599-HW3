@@ -52,7 +52,6 @@ Please create your test cases and run the following command to verify the functi
 ```
 bazel test tests:q2_student_test
 ```
-Answer:
 
 ## Question 3 (10 Points. Easy)
 
@@ -120,18 +119,18 @@ Tasks:
 - the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.
-    - Example: `c=Complex(1,2); c++;`, c=*2+2i*
-    - Example: `c=Complex(1,2); --c;`, c=*0+2i*
+    - Example: `c=Complex(1,2); c++;`, *c=2+2i*
+    - Example: `c=Complex(1,2); --c;`, *c=0+2i*
 - the class will support '>' operator, which return a boolean data:
   - if both real and imaginary part of left hand side is larger than the right hand side, the answer will be true, otherwise, the answer is false.
-    - Example: (1+2i) > (0+3i) -> false
+    - Example: (1+2i) > (0+3i) -> *false*
 - the class will support '*' operator, which multiplies a real number:
-  - the function returns a new Complex object, which is multiplied both the real and imaginary parts.
-    - Example: `c=Complex(1,2); d=Complex(); d=c*2;`, d=*2+4i*
+  - the function returns a Complex object, which is multiplied both the real and imaginary parts.
+    - Example: `c=Complex(1,2); d=Complex(); d=c*2;`, *d=2+4i*
 - the class will support '+=' operator on either float number and Complex object:
   - data type before '+=' must be a Complex object.
-    - Example: `c=Complex(1,2); d=Complex(3,4); c+=d;`, c=*4+6i*
-    - Example: `c=Complex(1,2); float d=2; c+=d;`, c=*3+2i*
+    - Example: `c=Complex(1,2); d=Complex(3,4); c+=d;`, *c=4+6i*
+    - Example: `c=Complex(1,2); float d=2; c+=d;`, *c=3+2i*
 
 
 Write a test using GTest for your finction in [tests/q5_student_test.cc](tests/q5_student_test.cc).
