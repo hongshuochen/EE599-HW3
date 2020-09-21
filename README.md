@@ -127,7 +127,7 @@ Both of the Student_shallow and Student_deep has one member integer pointer id.
 - Student_deep
   - Write a **default constructor** to initialize id to 0
   - Write a **parameterized constructor** to initialize id
-  - Write a **destructor** to print "Delete Student_deep!"
+  - Write a **destructor** to print "Delete Student_deep!" and delete integer pointer
   - Write a **copy constructor** with **deep copy**
   - Write a **copy assignment operator** with **deep copy**
 
