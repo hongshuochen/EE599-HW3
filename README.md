@@ -37,8 +37,8 @@ Examples:
 - input = {1,5,4,10}, sum = 200, output = {}
 
 Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
-Please analyze the time complexity of your implementation.
 Please create your test cases and run the following command to verify the functionality of your program.
+Please analyze the time complexity of your implementation.
 ```
 bazel test tests:q2_student_test
 ```
