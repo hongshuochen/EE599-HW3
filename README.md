@@ -23,7 +23,7 @@ Answer:
 
 ## Question 2 (20 Points. Easy)
 
-Given a vector of integer *input*, and an integer *sum*, return a set with some inner sets, which are the numbers in *input* such that they can add up to sum. Function is defined as ```std::set<std::set<int>> twoSum(std::vector<int>& input, int sum)```
+Given a vector of integer *input*, and an integer *sum*, return a set of sets {a,b}, where a,b are in the input vector and a+b = sum, which are the numbers in *input* such that they can add up to sum. Function is defined as ```std::set<std::set<int>> twoSum(std::vector<int>& input, int sum)```
 
 - you may assume the vector input doesn't contain duplicated numbers.
 - you can only use numbers in vector once.
