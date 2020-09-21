@@ -107,22 +107,6 @@ bazel test tests:q3_student_test
 
 ## Question 4 (20 Points. Easy)
 
-- Write a function that takes a vector of integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
-  - Example: before: v=[1, 2, 2, 4], after : v=[1, 2, 4]
-  - Solve this for the following cases:
-    - You cannot use std::set
-  
-    ```void CPPLib::UniqeVectorNotBySet(std::vector<int> &input)```
-    - You can use std::set
-
-    ```void CPPLib::UniqeVectorBySet(std::vector<int> &input)```
-- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as input. The output is the same vector but in the reversed order:
-  - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::OddVector(std::vector<int> &input)``` that takes a vector of integers as input. The output should be the same vector where all even numbers are removed.
-  - Example: before: [1, 2, 3], after: [1, 3]
-- Write a function ```std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **union** of the values in v1 and v2. All the value in return vector should be unique.
-  - Example: input: (v1=[1, 2, 2, 3], v2=[3, 4, 4, 5]), output = [1, 2, 3, 4, 5]
-
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
