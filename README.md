@@ -279,8 +279,8 @@ The goal of this section is to introduce you to more challenging questions and s
 
 ## Optional Question 1 (Easy)
 
-Write a function that prints all items in a std::stack. After the print, the items in the stack should remain the same.
-Write a function that prints all items in a std::queue. After the print, the items in the queue should remain the same.
+- Write a function that prints all items in a std::stack. After the print, the items in the stack should remain the same.
+- Write a function that prints all items in a std::queue. After the print, the items in the queue should remain the same.
 
 ## Optional Question 2 (Medium)
 
