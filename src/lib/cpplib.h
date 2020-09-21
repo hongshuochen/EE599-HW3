@@ -94,6 +94,8 @@ class Complex{
 
   // default constructor
   Complex():real(0), ima(0){};
+  // default destructor
+  ~Complex();
   // implement constructor that takes 2 numbers as input parameters
 
   // implement a copy constructor
@@ -105,7 +107,8 @@ class Complex{
   float ima;
 
   // below here, we assume complex1, complex2 are instances of Complex.
-  // define your functions to enable operator overloading.
+  // define your functions to enable operator overloadings.
+
 
   //q5_1 complex++
 

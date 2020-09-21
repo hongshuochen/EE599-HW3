@@ -2,20 +2,8 @@
 #include "limits"
 
 // Question 2
-std::set<std::set<int>> twoSum(std::vector<int>& input, int sum){
-    std::set<std::set<int>> res = {};
-    std::unordered_map<int, int> hashmap;
-    for(auto i: input){
-        if(hashmap.find(sum-i) != hashmap.end()){
-            hashmap[sum-i] = i;
-            std::set<int> temp = {i, sum-i};
-            res.insert(temp);
-        }
-        else{
-            hashmap[sum-i] = 0;
-        }
-    }
-    return res;
+std::set<std::set<int>> CPPLib::twoSum(std::vector<int>& input, int sum){
+
 }
 
 // Question 3

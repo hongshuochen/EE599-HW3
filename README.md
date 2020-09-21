@@ -29,16 +29,15 @@ Given a vector of integer *input*, and an integer *sum*, return a set of sets {a
 - you can only use numbers in vector once.
 - if there is no answer, the output should return an empty set.
 - you may return **all** results in the input vector if there are multiple answers.
-- Hint: you may try unordered_map.
-Examples:
+- **Hint**: you may try unordered_map.
+- Examples:
 
-- input = {2,3,4,5}, sum = 7, output = {{2,5},{3,4}}
-- input = {2,3,-2,5,0}, sum = 0, output = {{2,-2}}
-- input = {1,5,4,10}, sum = 200, output = {}
+  - input = {2,3,4,5}, sum = 7, output = {{2,5},{3,4}}
+  - input = {2,3,-2,5,0}, sum = 0, output = {{2,-2}}
+  - input = {1,5,4,10}, sum = 200, output = {}
 
 Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
 Please create your test cases and run the following command to verify the functionality of your program.
-Please analyze the time complexity of your implementation.
 ```
 bazel test tests:q2_student_test
 ```
@@ -193,31 +192,32 @@ bazel test tests:q4_student_test
 
 ## Question 5 (20 Points. Medium)
 Write a class to implement how complex number works in mathematics. A complex number can be expressed 
-as **a+bi**, where a and b are real numbers. You are given an incomplete class `Complex`
+as **a+bi**, where a and b are real numbers. You are given an incomplete class `Complex`:
 ```c++
 class Complex{
  public:
 
   Complex():real(0), ima(0){};
+  ~Complex();
   float real;
   float ima;
 ```
 Tasks:
-- implement a constructor that takes the initial real and imaginary number as 2 parameters.
-- implement a copy constructor.
-- implement a copy assignment operator.
-- the class will support '++' (as postfix) and '--' (as prefix) operators.
+1. implement a constructor that takes the initial real and imaginary number as 2 parameters.
+2. implement a copy constructor.
+3. implement an assignment operator.
+4. the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.
     - Example: `c=Complex(1,2); c++;`, *c=2+2i*
     - Example: `c=Complex(1,2); --c;`, *c=0+2i*
-- the class will support '>' operator, which return a boolean data:
+5. the class will support '>' operator, which return a boolean data:
   - if both real and imaginary part of left hand side is larger than the right hand side, the answer will be true, otherwise, the answer is false.
     - Example: (1+2i) > (0+3i) = *false*
-- the class will support '*' operator, which multiplies a real number:
+6. the class will support '*' operator, which multiplies a real number:
   - the function returns a Complex object, which is multiplied both the real and imaginary parts.
     - Example: `c=Complex(1,2); d=Complex(); d=c*2;`, *d=2+4i*
-- the class will support '+=' operator on either float number and Complex object:
+7. the class will support '+=' operator on either float number and Complex object:
   - data type before '+=' must be a Complex object.
     - Example: `c=Complex(1,2); d=Complex(3,4); c+=d;`, *c=4+6i*
     - Example: `c=Complex(1,2); float d=2; c+=d;`, *c=3+2i*
