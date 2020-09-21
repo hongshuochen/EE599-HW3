@@ -205,7 +205,7 @@ class Complex{
 Tasks:
 - implement a constructor that takes the initial real and imaginary number as 2 parameters.
 - implement a copy constructor.
-- implement an copy assignment operator.
+- implement a copy assignment operator.
 - the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.
@@ -265,6 +265,10 @@ Example 6:
 Input: "{2k++[5--*j]}"
 Output: true
 
+Write a test using GTest for your finction in [tests/q6_student_test.cc](tests/q6_student_test.cc).
+```
+bazel test tests:q6_student_test
+```
 ## Optional Question
 
 The goal of this section is to introduce you to more challenging questions and some common problems in coding and algorithms.
