@@ -10,25 +10,14 @@
 
 ## Question 1 (10 Points. Easy)
 
-Write several functions with the same name ```myfunction``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
+Please compare pros and cons of the following options:
 
-- All three functions take 2 parameters as the input.
-- If both inputs are integers perform multiplication and return the result.
-- If both inputs are string, concatenate both the strings and return the output.
-- If the first input is an integer and the second input is a string or vice-versa your code should return a string that will hold the concatenated value of both the inputs.
+- Passing parameters by value
+- Passing parameters using pointers
+- Passing parameters using references
+- Passing parameters using const references
 
-Examples:
-
-- input: (3, 5), output: 15
-- input: (“abc”, “efg”), output: “abcdefg”
-- input: (“EE”, 599), output: “EE599”
-
-Write several tests using GTest for your function in [tests/q1_student_test.cc](tests/q1_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q1_student_test
-```
+Please mention when each item is preferred.
 
 ## Question 2 (20 Points. Easy)
 
