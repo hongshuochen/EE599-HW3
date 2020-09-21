@@ -205,7 +205,7 @@ class Complex{
 Tasks:
 - implement a constructor that takes the initial real and imaginary number as 2 parameters.
 - implement a copy constructor.
-- implement an assignment constructor.
+- implement an copy assignment operator.
 - the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.
@@ -213,7 +213,7 @@ Tasks:
     - Example: `c=Complex(1,2); --c;`, *c=0+2i*
 - the class will support '>' operator, which return a boolean data:
   - if both real and imaginary part of left hand side is larger than the right hand side, the answer will be true, otherwise, the answer is false.
-    - Example: (1+2i) > (0+3i) -> *false*
+    - Example: (1+2i) > (0+3i) = *false*
 - the class will support '*' operator, which multiplies a real number:
   - the function returns a Complex object, which is multiplied both the real and imaginary parts.
     - Example: `c=Complex(1,2); d=Complex(); d=c*2;`, *d=2+4i*
