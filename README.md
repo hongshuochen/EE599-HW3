@@ -104,8 +104,6 @@ Write several tests using GTest for your function in [tests/q3_student_test.cc](
 
 Please create your test cases and run the following command to verify the functionality of your program.
 
-Please analyze the time complexity of each function.
-
 ```c++
 bazel test tests:q3_student_test
 ```
