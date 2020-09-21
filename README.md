@@ -30,37 +30,89 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q1_student_test
 ```
 
-## Question 2 (10 Points. Easy)
+## Question 2 (20 Points. Easy)
 
-How would you find the size of a non-dynamic array? (We are asking about an array, not a vector). Provide the example and outputs of your run for:
+Given a vector of integer *input*, and an integer *sum*, return a set with some inner sets, which are the numbers in *input* such that they can add up to sum. Function is defined as ```std::set<std::set<int>> twoSum(std::vector<int>& input, int sum)```
 
-- An array of integers
-- An array of chars
-- An array of floats
+- you may assume the vector input doesn't contain duplicated numbers.
+- you can only use numbers in vector once.
+- if there is no answer, the output should return an empty set.
+- you may return **all** results in the input vector if there are multiple answers.
+- Hint: you may try unordered_map.
 
-Answer:
+Examples:
 
-## Question 3 (10 Points. Easy)
+- input = {2,3,4,5}, sum = 7, output = {{2,5},{3,4}}
+- input = {2,3,-2,5,0}, sum = 0, output = {{2,-2}}
+- input = {1,5,4,10}, sum = 200, output = {}
 
-Write a function swap that will swap the values of the inputs (two integers).
-Implement this using
+Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
 
-- **pass by references**
+Please create your test cases and run the following command to verify the functionality of your program.
+```
+bazel test tests:q2_student_test
+```
 
-  ```void CPPLib::SwapByRefernce(int &input1, int &input2);```
-- **pass by pointers**
+## Question 3 (60 Points. Medium)
 
-  ```void CPPLib::SwapByPointer(int *input1, int *input2);```
+Implement the following class for a Linked List of integer values in your [cpplib.cc](src/lib/cpplib.cc) file.
 
-Example :\
-Before: x = 20, y = 30 \
-We call Swap(x,y) \
-After: x = 30, y = 20
+```c++
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) { }
+};
+
+class SinglyLinkedList {
+public:
+  // default constructor
+  SinglyLinkedList();
+
+  //constructor creates a cyclic or acyclic linked list based on the value of i
+  //if i is negative or greater than input size, the last item's next is nullptr
+  //else creates a linked list out of vector "input" and connects the last item's next to i(th) item in the list
+  SinglyLinkedList(vector<int> &input, int i);
+  
+  ~SinglyLinkedList(); //destructor, cleans up
+
+  bool empty();//checks if empty
+
+  int size(); //returns size
+
+  void push_back(int i);//inserts at the back
+
+  void push_front(int i);//inserts at the front
+
+  void insert_after(ListNode* p, int i);//inserts value i after p
+
+  void erase(ListNode* p);//erases node p
+
+  void pop_front();//remove the first item
+
+  void pop_back();//remove the last item
+
+  ListNode* GetBackPointer();//returns the pointer to the last item
+
+  ListNode* GetIthPointer(int i);//returns pointer to ith element
+
+  void reverse(); // reverse the linked list in-place
+
+  void print();//prints the list: ex. Empty list: { }. List with Items: {1, 2, 3}
+
+  ListNode *head_;//Pointer to the first element
+
+};
+```
+
+You can assume that the Linked List is **acyclic** except for the constructor ```SinglyLinkedList(vector<int> &input, int i);```.
+
+All functions except for print() require a GTest.
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
-```
+```c++
 bazel test tests:q3_student_test
 ```
 
@@ -89,23 +141,39 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q4_student_test
 ```
 
-## Question 5 (15 Points. Easy)
+## Question 5 (20 Points. Medium)
+Write a class to implement how complex number works in mathematics. A complex number can be expressed 
+as **a+bi**, where a and b are real numbers. You are given an incomplete class `Complex`
+```c++
+class Complex{
+ public:
 
-- Write a function that takes a string as an input and **reverses** its value. The function has no output. It changes the value of the input parameter. Write a simple function ```void CPPLib::ReverseString(std::string &input)``` in [cpplib.cc](src/lib/cpplib.cc). *You are welcomed to call existing STL functions*.
+  Complex():real(0), ima(0){};
+  float real;
+  float ima;
+```
+Tasks:
+- implement a constructor that takes the initial real and imaginary number as 2 parameters.
+- implement a copy constructor.
+- implement an assignment constructor.
+- the class will support '++' (as postfix) and '--' (as prefix) operators.
+  - `complex++` should increase the real part by 1. 
+  - `--complex` should decrease the real part by 1.
+    - Example: `c=Complex(1,2); c++;`, *c=2+2i*
+    - Example: `c=Complex(1,2); --c;`, *c=0+2i*
+- the class will support '>' operator, which return a boolean data:
+  - if both real and imaginary part of left hand side is larger than the right hand side, the answer will be true, otherwise, the answer is false.
+    - Example: (1+2i) > (0+3i) -> *false*
+- the class will support '*' operator, which multiplies a real number:
+  - the function returns a Complex object, which is multiplied both the real and imaginary parts.
+    - Example: `c=Complex(1,2); d=Complex(); d=c*2;`, *d=2+4i*
+- the class will support '+=' operator on either float number and Complex object:
+  - data type before '+=' must be a Complex object.
+    - Example: `c=Complex(1,2); d=Complex(3,4); c+=d;`, *c=4+6i*
+    - Example: `c=Complex(1,2); float d=2; c+=d;`, *c=3+2i*
 
-  - Example: Input: “EE599”, Output: “995EE”, string is stricted to be alphanumeric.
-  - You cannot use any new local variable of type *string or vector or array*, but you can create extra O(1) space, such as *int*. The reverse should happen **in place** (i.e. on the input string).
 
-- Write a function that takes a vector as an input and **reverses** its value. Write a simple function ```std::vector<int> CPPLib::ReverseVector_1(std::vector<int> input)``` in [cpplib.cc](src/lib/cpplib.cc)
-
-  - Example: Input: {1,2,3,4}, Output: {4,3,2,1}. 
-  - Use of [stack](https://en.cppreference.com/w/cpp/container/stack) is needed.
-
-- Write a function that converts a string to lower case. Write a simple function ```void CPPLib::ToLower(std::string& )``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
-  - Example: input: “EE599”, output: “ee599”
-  - Use of [transform](http://www.cplusplus.com/reference/algorithm/transform/) is recommended but not a must.
-
-For all of the three questions, write a test using GTest for your finction in [tests/q5_student_test.cc](tests/q5_student_test.cc).
+Write a test using GTest for your finction in [tests/q5_student_test.cc](tests/q5_student_test.cc).
 ```
 bazel test tests:q5_student_test
 ```
