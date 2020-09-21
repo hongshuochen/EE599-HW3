@@ -166,8 +166,7 @@ Menu:
 Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
 
 2. What is the ​last​ element?
-Once this is selected, the ​last​ element should be printed and the current location
-should be set to the ​last​ element.
+Once this is selected, the ​last​ element should be printed and the current location should be set to the ​last​ element.
 
 3. What is the ​current element​?
 This should print the value at the current location. See examples below.
@@ -188,75 +187,122 @@ If the value of ​i ​is greater than the size of your vector then you should 
   - [1, 4, 5, 23, 100, 12, 18, 175]
   - Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
 
-## Question 6 (25 Points. Medium)
-
-A palindrome is a word, phrase, or other sequences of characters that reads the same backward as forward, such as **madam**, **racecar**, or the number **10801**.
-
- Write a function ```bool canBePalindrome(const std::string &str)``` in [cpplib.cc](src/lib/cpplib.cc) that returns true if the permutation of the input could form a palindrome. and false if it is not.
-
-
-Example:\
-Input: str = "code".\
-Output: false.\
-Input: str = "aab".\
-Output: true.
-
-Write several tests using GTest for your function in [tests/q6_student_test.cc](tests/q6_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
 ```
-bazel test tests:q6_student_test
-```
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+1
+Output: 10
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options:
+ 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location? 5. Exit.
+********************************************************************* *
+4
+Enter the value of i:: 3
+Output: 40
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+3
+Output: 40
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
 
-## Question 7 (20 Points. Medium)
+ 5. Exit. *********************************************************************
+*
+2
+Output: 100
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+4
+Enter the value of i::
+3
+Output: Sorry! You cannot traverse 3 elements from your current location.
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit.
+********************************************************************* *
 
-Write a function ```std::map<char, char> CPPLib::Mappable(const std::string& from, const std::string& to)``` in [cpplib.cc](src/lib/cpplib.cc).
-Write a function that takes two strings from and to and determines if they are mappable.
+ 3
+Output: 100
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+1
+Output: 10
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+3
+Output: 10
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 
-- Two strings are mappable if the characters in from can be replaced to get to.
-- You can assume characters are strictly lower cases.  
-- Each character can only map to itself.
-- The output should be a map:
-  - Empty map if the mapping is not possible
-  - The actual map if the mapping was possible
-
-Example 1:
-Input: from = "add", to = "egg”
-Output: {(a->e), (d->g)}
-
-Example 2:
-Input: from = "extreme", to = "egg”
-Output: { }
-
-Example 3:
-Input: from = "harder", to = "waiter”
-Output: { }, because you cannot map 'r' to 'i' and 'r' at the same time!
-
-Example 4:
-Input: from = "aabbrr", to = "ddeekk”
-Output: {(a->d),(b->e), (r->k)}
-
-Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q7_student_test
-```
-
-## Question 8 (20 Points. Medium)
-
- Write a function ```void kthPeek(std::vector<int> &input, int k);``` in [cpplib.cc](src/lib/cpplib.cc) that
-
-- Finds the kth smallest value of the vector, called target(the vector is not sorted)
-- It then rearranges the vector in such a way that it will have all the values lower than the target on the left side in ascending order and all the greater than the target value on the right side in descending order.
-
-Example:\
-Input: {637, 231, 123, 69, 43, 900, 10, 7, 21, 99, 0, 500}, k = 6.\
-Output: Output:{0, 7, 10, 21, 43, 69, 900, 637, 500, 231, 123, 99 }. (target = 69)
-
-Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q8_student_test
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+4
+Enter the value of i:: 3
+Output: 40
+********************************************************************* *
+Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+********************************************************************* *
+Please choose any of the following options: 1. What is the first element?
+2. What is the last element?
+3. What is the current element?
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
+5
+Exit !
 ```
