@@ -23,12 +23,11 @@ std::set<std::set<int>> twoSum(std::vector<int>& input, int sum){
 }
 
 // Question 3
-void CPPLib::SwapByRefernce(int &input1, int &input2){
-    // Please fill up this function.
+//one example
+SinglyLinkedList::SinglyLinkedList() {
+    //write you code
 }
-void CPPLib::SwapByPointer(int *input1, int *input2){
-    // Please fill up this function.
-}
+//move on for other methods
 
 // Question 4
 void CPPLib::UniqeVectorNotBySet(std::vector<int> &input){

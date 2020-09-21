@@ -53,27 +53,66 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q2_student_test
 ```
 
-## Question 3 (10 Points. Easy)
+## Question 3 (60 Points. Medium)
 
-Write a function swap that will swap the values of the inputs (two integers).
-Implement this using
+Implement the following class for a Linked List of integer values in your .h file.
 
-- **pass by references**
+```c++
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) { }
+};
 
-  ```void CPPLib::SwapByRefernce(int &input1, int &input2);```
-- **pass by pointers**
+class SinglyLinkedList {
+public:
+  // default constructor
+  SinglyLinkedList();
 
-  ```void CPPLib::SwapByPointer(int *input1, int *input2);```
+  //constructor creates a cyclic or acyclic linked list based on the value of i
+  //if i is negative or greater than input size, the last item's next is nullptr
+  //else creates a linked list out of vector "input" and connects the last item's next to i(th) item in the list
+  SinglyLinkedList(vector<int> &input, int i);
+  
+  ~SinglyLinkedList(); //destructor, cleans up
 
-Example :\
-Before: x = 20, y = 30 \
-We call Swap(x,y) \
-After: x = 30, y = 20
+  bool empty();//checks if empty
+
+  int size(); //returns size
+
+  void push_back(int i);//inserts at the back
+
+  void push_front(int i);//inserts at the front
+
+  void insert_after(ListNode* p, int i);//inserts value i after p
+
+  void erase(ListNode* p);//erases node p
+
+  void pop_front();//remove the first item
+
+  void pop_back();//remove the last item
+
+  ListNode* GetBackPointer();//returns the pointer to the last item
+
+  ListNode* GetIthPointer(int i);//returns pointer to ith element
+
+  void reverse(); // reverse the linked list in-place
+
+  void print();//prints the list: ex. Empty list: { }. List with Items: {1, 2, 3}
+
+  ListNode *head_;//Pointer to the first element
+
+};
+```
+
+You can assume that the Linked List is **acyclic** except for the constructor ```SinglyLinkedList(vector<int> &input, int i);```.
+
+All functions except for print() require a GTest.
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
-```
+```c++
 bazel test tests:q3_student_test
 ```
 
