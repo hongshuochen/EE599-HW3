@@ -189,21 +189,31 @@ Example input vector: [​10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 Menu:
 1. What is the ​first​ element?
-a. (Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.)
+
+Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
+
 2. What is the ​last​ element?
-a. (Once this is selected, the ​last​ element should be printed and the current location
-should be set to the ​last​ element.) 3. What is the ​current element​?
-a. (This should print the value at the current location. See examples below.) 4. What is the i(th) element from the current location?
-a. (Once this is selected, the code should print the value at the current location.)
-b. If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”)
-c. If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”)
+Once this is selected, the ​last​ element should be printed and the current location
+should be set to the ​last​ element.
+
+3. What is the ​current element​?
+This should print the value at the current location. See examples below.
+
+4. What is the i(th) element from the current location?
+
+Once this is selected, the code should print the value at the current location.
+
+If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”
+
+If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”
+
 5. Exit.
-● Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects
-5​ you should print “​Exit​!” and end the execution.
-● GTests are NOT required for this question.
-● Submit your code, along with a sample text file of the output for this input vector:
-○ [1, 4, 5, 23, 100, 12, 18, 175]
-○ Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
+
+- Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects 5​ you should print “​Exit​!” and end the execution.
+- GTests are NOT required for this question.
+- Submit your code, along with a sample text file of the output for this input vector:
+  - [1, 4, 5, 23, 100, 12, 18, 175]
+  - Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
 
 ## Question 6 (25 Points. Medium)
 
