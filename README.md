@@ -129,7 +129,7 @@ Both of the Student_shallow and Student_deep has one member integer pointer id.
   - Write a **parameterized constructor** to initialize id
   - Write a **destructor** to print "Delete Student_deep!"
   - Write a **copy constructor** with **deep copy**
-  - Write a copy assignment operator with **deep copy**
+  - Write a **copy assignment operator** with **deep copy**
 
 ```c++
 class Student_shallow
