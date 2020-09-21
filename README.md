@@ -353,10 +353,15 @@ Menu:
 1. What is the ​first​ element?
 
 Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
+
 2. What is the ​last​ element?
+
 Once this is selected, the ​last​ element should be printed and the current location should be set to the ​last​ element.
+
 3. What is the ​current element​?
+
 This should print the value at the current location. See examples below.
+
 4. What is the i(th) element from the current location?
 
 Once this is selected, the code should print the value at the current location.
@@ -392,8 +397,9 @@ Please choose any of the following options:
 1. What is the first element?
 2. What is the last element?
 3. What is the current element?
-4. What is the ith element from the current location? 5. Exit.
-********************************************************************* *
+4. What is the ith element from the current location?
+5. Exit. *********************************************************************
+*
 4
 Enter the value of i:: 3
 Output: 40
@@ -417,8 +423,7 @@ Please choose any of the following options:
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
-
- 5. Exit. *********************************************************************
+5. Exit. *********************************************************************
 *
 2
 Output: 100
@@ -444,10 +449,9 @@ Please choose any of the following options:
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
-5. Exit.
-********************************************************************* *
-
- 3
+5. Exit. *********************************************************************
+*
+3
 Output: 100
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
