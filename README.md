@@ -299,17 +299,22 @@ Input: inputs = [3,2,0,-4], i = 1\
 Output: true\
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 
+![](img/1.png)
+
 Example 2:\
 Input: inputs = [1,2], i = 0\
 Output: true\
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
 
+![](img/2.png)
 
 Example 3:\
 Input: inputs = [1], i = -1\
 Output: false\
 Explanation: There is no cycle in the linked list.
- 
+
+![](img/3.png)
+
 ## Optional Question 3 (Medium)
 
 For the SinglyLinkedList class, Implement the following function:
