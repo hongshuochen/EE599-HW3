@@ -55,7 +55,7 @@ bazel test tests:q2_student_test
 
 ## Question 3 (60 Points. Medium)
 
-Implement the following class for a Linked List of integer values in your .h file.
+Implement the following class for a Linked List of integer values in your cpplib.cc file.
 
 ```c++
 struct ListNode {
