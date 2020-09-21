@@ -107,6 +107,74 @@ bazel test tests:q3_student_test
 
 ## Question 4 (20 Points. Easy)
 
+Write 2 classes to practice how to use the constructor, copy constructor, assign operators and destructor and compare the deep copy with shallow copy.
+
+Both of the Student_shallow and Student_deep has one member integer pointer id.
+
+- Student_shallow
+  - Write a **default constructor** to initialize id to 0
+  - Write a **parameterized constructor** to initialize id
+  - Write a **destructor** to print "Delete Student_shallow!"
+
+- Student_deep
+  - Write a **default constructor** to initialize id to 0
+  - Write a **parameterized constructor** to initialize id
+  - Write a **destructor** to print "Delete Student_deep!"
+  - Write a **copy constructor** with **deep copy**
+  - Write a **assign operators** with **deep copy** 
+
+Eaxmple:
+```
+Student_shallow a;
+Student_shallow b = a;
+Student_shallow c;
+c = a;
+cout << *a.id << *b.id << *c.id << endl;
+*c.id = 1;
+cout << *a.id << *b.id << *c.id << endl;
+
+Student_deep a;
+Student_deep b = a;
+Student_deep c;
+c = a;
+cout << *a.id << *b.id << *c.id << endl;
+*c.id = 1;
+cout << *a.id << *b.id << *c.id << endl;
+```
+Exepcted output:
+```
+000
+111
+000
+001
+Delete Student_deep!
+Delete Student_deep!
+Delete Student_deep!
+Delete Student_shallow!
+Delete Student_shallow!
+Delete Student_shallow!
+```
+```c++
+class Student_shallow
+{
+public:
+    int* id;
+    Student_shallow();
+    Student_shallow(int);
+    ~Student_shallow();
+}
+class Student_deep
+{
+public:
+    int* id;
+    Student_deep();
+    Student_deep(int);
+    ~Student_deep();
+    Student_deep(const Student_deep&);
+    Student_deep& operator=(const Student_deep&);
+}
+```
+
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
@@ -171,82 +239,9 @@ a. (Once this is selected, the code should print the value at the current locati
 b. If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”)
 c. If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”)
 5. Exit.
-● Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects
+- Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects
 5​ you should print “​Exit​!” and end the execution.
-● GTests are NOT required for this question.
-● Submit your code, along with a sample text file of the output for this input vector:
-○ [1, 4, 5, 23, 100, 12, 18, 175]
-○ Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
-
-## Question 6 (25 Points. Medium)
-
-A palindrome is a word, phrase, or other sequences of characters that reads the same backward as forward, such as **madam**, **racecar**, or the number **10801**.
-
- Write a function ```bool canBePalindrome(const std::string &str)``` in [cpplib.cc](src/lib/cpplib.cc) that returns true if the permutation of the input could form a palindrome. and false if it is not.
-
-
-Example:\
-Input: str = "code".\
-Output: false.\
-Input: str = "aab".\
-Output: true.
-
-Write several tests using GTest for your function in [tests/q6_student_test.cc](tests/q6_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q6_student_test
-```
-
-## Question 7 (20 Points. Medium)
-
-Write a function ```std::map<char, char> CPPLib::Mappable(const std::string& from, const std::string& to)``` in [cpplib.cc](src/lib/cpplib.cc).
-Write a function that takes two strings from and to and determines if they are mappable.
-
-- Two strings are mappable if the characters in from can be replaced to get to.
-- You can assume characters are strictly lower cases.  
-- Each character can only map to itself.
-- The output should be a map:
-  - Empty map if the mapping is not possible
-  - The actual map if the mapping was possible
-
-Example 1:
-Input: from = "add", to = "egg”
-Output: {(a->e), (d->g)}
-
-Example 2:
-Input: from = "extreme", to = "egg”
-Output: { }
-
-Example 3:
-Input: from = "harder", to = "waiter”
-Output: { }, because you cannot map 'r' to 'i' and 'r' at the same time!
-
-Example 4:
-Input: from = "aabbrr", to = "ddeekk”
-Output: {(a->d),(b->e), (r->k)}
-
-Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q7_student_test
-```
-
-## Question 8 (20 Points. Medium)
-
- Write a function ```void kthPeek(std::vector<int> &input, int k);``` in [cpplib.cc](src/lib/cpplib.cc) that
-
-- Finds the kth smallest value of the vector, called target(the vector is not sorted)
-- It then rearranges the vector in such a way that it will have all the values lower than the target on the left side in ascending order and all the greater than the target value on the right side in descending order.
-
-Example:\
-Input: {637, 231, 123, 69, 43, 900, 10, 7, 21, 99, 0, 500}, k = 6.\
-Output: Output:{0, 7, 10, 21, 43, 69, 900, 637, 500, 231, 123, 99 }. (target = 69)
-
-Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q8_student_test
-```
+- GTests are NOT required for this question.
+- Submit your code, along with a sample text file of the output for this input vector:
+  - [1, 4, 5, 23, 100, 12, 18, 175]
+  - Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
