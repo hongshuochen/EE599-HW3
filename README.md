@@ -1,34 +1,23 @@
 
-# HW2 EE599 - Computing Principles for Electrical Engineers
+# HW3 EE599 - Computing Principles for Electrical Engineers
 
 - Plesae clone the repository, edit [README.md](README.md) to answer the questions, and fill up functions to finish the hw.
 - For non-coding quesitions, you will find **Answer** below each question. Please write your answer there.
 - For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests).
 - For submission, please push your answers to Github before the deadline.
-- Deadline: Monday, September 21st by 23:59 pm
+- Deadline: Monday, September 28st by 23:59 pm
 - Total: 130 points. 100 points is considered full credit.
 
 ## Question 1 (10 Points. Easy)
 
-Write several functions with the same name ```myfunction``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
+Please compare pros and cons of the following options:
 
-- All three functions take 2 parameters as the input.
-- If both inputs are integers perform multiplication and return the result.
-- If both inputs are string, concatenate both the strings and return the output.
-- If the first input is an integer and the second input is a string or vice-versa your code should return a string that will hold the concatenated value of both the inputs.
+- Passing parameters by value
+- Passing parameters using pointers
+- Passing parameters using references
+- Passing parameters using const references
 
-Examples:
-
-- input: (3, 5), output: 15
-- input: (“abc”, “efg”), output: “abcdefg”
-- input: (“EE”, 599), output: “EE599”
-
-Write several tests using GTest for your function in [tests/q1_student_test.cc](tests/q1_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q1_student_test
-```
+Please mention when each item is preferred.
 
 ## Question 2 (20 Points. Easy)
 
@@ -117,22 +106,6 @@ bazel test tests:q3_student_test
 ```
 
 ## Question 4 (20 Points. Easy)
-
-- Write a function that takes a vector of integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
-  - Example: before: v=[1, 2, 2, 4], after : v=[1, 2, 4]
-  - Solve this for the following cases:
-    - You cannot use std::set
-  
-    ```void CPPLib::UniqeVectorNotBySet(std::vector<int> &input)```
-    - You can use std::set
-
-    ```void CPPLib::UniqeVectorBySet(std::vector<int> &input)```
-- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as input. The output is the same vector but in the reversed order:
-  - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::OddVector(std::vector<int> &input)``` that takes a vector of integers as input. The output should be the same vector where all even numbers are removed.
-  - Example: before: [1, 2, 3], after: [1, 3]
-- Write a function ```std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **union** of the values in v1 and v2. All the value in return vector should be unique.
-  - Example: input: (v1=[1, 2, 2, 3], v2=[3, 4, 4, 5]), output = [1, 2, 3, 4, 5]
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
