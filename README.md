@@ -19,7 +19,7 @@ Please compare pros and cons of the following options:
 
 Please mention when each item is preferred.
 
-**Answer**:
+Answer:
 
 ## Question 2 (20 Points. Easy)
 
@@ -30,7 +30,7 @@ Given a vector of integer *input*, and an integer *sum*, return a set with some 
 - if there is no answer, the output should return an empty set.
 - you may return **all** results in the input vector if there are multiple answers.
 - Hint: you may try unordered_map.
-
+- Please analyze the time complexity of your implementation
 Examples:
 
 - input = {2,3,4,5}, sum = 7, output = {{2,5},{3,4}}
@@ -43,6 +43,8 @@ Please create your test cases and run the following command to verify the functi
 ```
 bazel test tests:q2_student_test
 ```
+
+Answer:
 
 ## Question 3 (60 Points. Medium)
 
@@ -103,9 +105,14 @@ All functions except for print() require a GTest.
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
+
+Please analyze the time complexity of each function.
+
 ```c++
 bazel test tests:q3_student_test
 ```
+
+Answer:
 
 ## Question 4 (20 Points. Easy)
 
@@ -124,6 +131,27 @@ Both of the Student_shallow and Student_deep has one member integer pointer id.
   - Write a **destructor** to print "Delete Student_deep!"
   - Write a **copy constructor** with **deep copy**
   - Write a **assign operators** with **deep copy** 
+
+```c++
+class Student_shallow
+{
+public:
+    int* id;
+    Student_shallow();
+    Student_shallow(int);
+    ~Student_shallow();
+}
+class Student_deep
+{
+public:
+    int* id;
+    Student_deep();
+    Student_deep(int);
+    ~Student_deep();
+    Student_deep(const Student_deep&);
+    Student_deep& operator=(const Student_deep&);
+}
+```
 
 Eaxmple:
 ```
@@ -155,26 +183,6 @@ Delete Student_deep!
 Delete Student_shallow!
 Delete Student_shallow!
 Delete Student_shallow!
-```
-```c++
-class Student_shallow
-{
-public:
-    int* id;
-    Student_shallow();
-    Student_shallow(int);
-    ~Student_shallow();
-}
-class Student_deep
-{
-public:
-    int* id;
-    Student_deep();
-    Student_deep(int);
-    ~Student_deep();
-    Student_deep(const Student_deep&);
-    Student_deep& operator=(const Student_deep&);
-}
 ```
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
@@ -232,19 +240,6 @@ Example input vector: [​10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 Menu:
 1. What is the ​first​ element?
-<<<<<<< HEAD
-a. (Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.)
-2. What is the ​last​ element?
-a. (Once this is selected, the ​last​ element should be printed and the current location
-should be set to the ​last​ element.) 3. What is the ​current element​?
-a. (This should print the value at the current location. See examples below.) 4. What is the i(th) element from the current location?
-a. (Once this is selected, the code should print the value at the current location.)
-b. If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”)
-c. If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”)
-5. Exit.
-- Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects
-5​ you should print “​Exit​!” and end the execution.
-=======
 
 Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
 
@@ -265,12 +260,10 @@ If the value of ​i ​is greater than the size of your vector then you should 
 5. Exit.
 
 - Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects 5​ you should print “​Exit​!” and end the execution.
->>>>>>> 3d66200439d6fb25db2e3c5cac1ccdcd984811c8
 - GTests are NOT required for this question.
 - Submit your code, along with a sample text file of the output for this input vector:
   - [1, 4, 5, 23, 100, 12, 18, 175]
   - Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
-<<<<<<< HEAD
 =======
 
 ```
@@ -392,4 +385,3 @@ Please choose any of the following options: 1. What is the first element?
 5
 Exit !
 ```
->>>>>>> 3d66200439d6fb25db2e3c5cac1ccdcd984811c8
