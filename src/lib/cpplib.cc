@@ -1,10 +1,6 @@
 #include "cpplib.h"
 #include "limits"
 
-// Question 1
-// Please create your functions here.
-// You should write 4 functions
-
 // Question 2
 std::set<std::set<int>> twoSum(std::vector<int>& input, int sum){
     std::set<std::set<int>> res = {};
@@ -30,21 +26,8 @@ SinglyLinkedList::SinglyLinkedList() {
 //move on for other methods
 
 // Question 4
-void CPPLib::UniqeVectorNotBySet(std::vector<int> &input){
-    // Please fill up this function.
-}
-void CPPLib::UniqeVectorBySet(std::vector<int> &input){
-    // Please fill up this function.
-}
-void CPPLib::ReverseVector(std::vector<int> &input){
-    // Please fill up this function.
-}
-void CPPLib::OddVector(std::vector<int> &input){
-    // Please fill up this function.
-}
-std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2){
-    // Please fill up this function.
-}
+
+
 
 // Question 5
 
@@ -70,20 +53,4 @@ std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int>
 //q5_6 complex2 -= complex2
 
 // Question 6
-bool CPPLib::canBePalindrome(const std::string &str)
-{
-    // Please fill up this function.
-    return true;
-}
 
-// Question 7 
-std::map<char,char> CPPLib::Mappable(const std::string& from, const std::string& to)
-{
-    // Please fill up this function.
-}
-
-// Question 8
-void CPPLib::kthPeek(std::vector<int> &input, int k)
-{
-    // Please fill up this function.
-}

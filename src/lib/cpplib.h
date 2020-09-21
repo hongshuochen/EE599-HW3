@@ -14,29 +14,10 @@ using namespace std;
  */
 class CPPLib {
  public:
-  //q1
-  // Please create your functions here.
 
   //q2
   std::set<std::set<int>> twoSum(std::vector<int>& input, int sum);
 
-  //q4
-  void UniqeVectorNotBySet(std::vector<int> &input);
-  void UniqeVectorBySet(std::vector<int> &input);
-  void ReverseVector(std::vector<int> &input);
-  void OddVector(std::vector<int> &input);
-  std::vector<int> UnionVectors(std::vector<int> &input1, std::vector<int> &input2);
-
-  //q6 
-  bool canBePalindrome(const std::string &str);
-
-  //q7
-  std::map<char, char> Mappable(const std::string& from, const std::string& to);
-
-  //q8
-  void kthPeek(std::vector<int> &input, int k);
-
-  private : 
 };
 
 //q3
@@ -85,6 +66,26 @@ public:
 
   ListNode *head_;//Pointer to the first element
 
+};
+
+// q4
+class Student_shallow
+{
+public:
+    int* id;
+    Student_shallow();
+    Student_shallow(int);
+    ~Student_shallow();
+};
+class Student_deep
+{
+public:
+    int* id;
+    Student_deep();
+    Student_deep(int);
+    ~Student_deep();
+    Student_deep(const Student_deep&);
+    Student_deep& operator=(const Student_deep&);
 };
 
 //q5

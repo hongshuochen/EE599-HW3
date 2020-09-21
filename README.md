@@ -140,7 +140,7 @@ public:
     Student_shallow();
     Student_shallow(int);
     ~Student_shallow();
-}
+};
 class Student_deep
 {
 public:
@@ -150,7 +150,7 @@ public:
     ~Student_deep();
     Student_deep(const Student_deep&);
     Student_deep& operator=(const Student_deep&);
-}
+};
 ```
 
 Eaxmple:
@@ -385,3 +385,4 @@ Please choose any of the following options: 1. What is the first element?
 5
 Exit !
 ```
+Answer:
