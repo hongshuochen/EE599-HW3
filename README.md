@@ -30,7 +30,6 @@ Given a vector of integer *input*, and an integer *sum*, return a set with some 
 - if there is no answer, the output should return an empty set.
 - you may return **all** results in the input vector if there are multiple answers.
 - Hint: you may try unordered_map.
-- Please analyze the time complexity of your implementation
 Examples:
 
 - input = {2,3,4,5}, sum = 7, output = {{2,5},{3,4}}
@@ -38,7 +37,7 @@ Examples:
 - input = {1,5,4,10}, sum = 200, output = {}
 
 Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
-
+Please analyze the time complexity of your implementation.
 Please create your test cases and run the following command to verify the functionality of your program.
 ```
 bazel test tests:q2_student_test
