@@ -326,8 +326,9 @@ Where p is a pointer to a node that we want to erase. Your implementation should
 ## Optional Question 4 (Medium)
 
 Add two more variables to the SinglyLinkedList class:
-size_: which tracks the size of the list.
-tail_: which always points to the last item in the list if the list doesn’t have a cycle, otherwise, its value is nullptr.
+- size_: which tracks the size of the list.
+- tail_: which always points to the last item in the list if the list doesn’t have a cycle, otherwise, its value is nullptr.
+
 How do each of these change the runtime of the class methods?
 
 ## Optional Question 5 (Medium)
