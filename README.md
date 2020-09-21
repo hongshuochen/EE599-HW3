@@ -46,7 +46,7 @@ bazel test tests:q2_student_test
 
 Answer:
 
-## Question 3 (60 Points. Medium)
+## Question 3 (50 Points. Medium)
 
 Implement the following class for a Linked List of integer values in your [cpplib.cc](src/lib/cpplib.cc) file.
 
@@ -114,7 +114,7 @@ bazel test tests:q3_student_test
 
 Answer:
 
-## Question 4 (20 Points. Easy)
+## Question 4 (10 Points. Easy)
 
 Write 2 classes to practice how to use the constructor, copy constructor, assign operators and destructor and compare the deep copy with shallow copy.
 
