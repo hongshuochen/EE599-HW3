@@ -229,159 +229,38 @@ bazel test tests:q5_student_test
 ```
 
 ## Question 6 (20 Points. Medium)
+Given an expression string, find if the input has valid brackets (i.e. { } or [ ] or ( ) ).
 
-Write a program that takes a vector as a parameter, prints it, and then depending upon the user input, it performs various operations on a vector using an iterator and iterator functions.
+An input expression is valid if:
 
-- Your code should have a variable to track the ​current location​ which will be pointing at the first element of the vector as soon as you start execution of your code and changes as the program runs.
-- You should print a menu to the user to perform the following operations.
+Open brackets are closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+An empty string is also considered valid.
 
-Example input vector: [​10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+You should only check for the validity of brackets based on the above rules, i.e. ‘(‘, ‘)’, ‘[‘, ‘]’, ‘{‘, ‘}’, not the rest of the expression.
 
-Menu:
-1. What is the ​first​ element?
+👉Hint: Iterate the input from beginning to end and use a std:stack.
 
-Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
+Example 1:
+Input: "(a+b)"
+Output: true
 
-2. What is the ​last​ element?
-Once this is selected, the ​last​ element should be printed and the current location should be set to the ​last​ element.
+Example 2:
+Input: "(a+b)[c*d]{5g+h}"
+Output: true
 
-3. What is the ​current element​?
-This should print the value at the current location. See examples below.
+Example 3:
+Input: "(a+b]"
+Output: false
 
-4. What is the i(th) element from the current location?
+Example 4:
+Input: "(7h+[5c)+7]"
+Output: false
 
-Once this is selected, the code should print the value at the current location.
+Example 5:
+Input: "{2k+[5j]}"
+Output: true
 
-If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”)
-
-If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”)
-
-5. Exit.
-
-- Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects 5​ you should print “​Exit​!” and end the execution.
-- GTests are NOT required for this question.
-- Submit your code, along with a sample text file of the output for this input vector:
-  - [1, 4, 5, 23, 100, 12, 18, 175]
-  - Assume the user selections from the menu are: 1, 2, 3, 1, 3, (4,2), 5
-=======
-
-```
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-1
-Output: 10
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options:
- 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location? 5. Exit.
-********************************************************************* *
-4
-Enter the value of i:: 3
-Output: 40
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-3
-Output: 40
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-
- 5. Exit. *********************************************************************
-*
-2
-Output: 100
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-4
-Enter the value of i::
-3
-Output: Sorry! You cannot traverse 3 elements from your current location.
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit.
-********************************************************************* *
-
- 3
-Output: 100
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-1
-Output: 10
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-3
-Output: 10
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-4
-Enter the value of i:: 3
-Output: 40
-********************************************************************* *
-Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
-2. What is the last element?
-3. What is the current element?
-4. What is the ith element from the current location?
-5. Exit. *********************************************************************
-*
-5
-Exit !
-```
-Answer:
+Example 6:
+Input: "{2k++[5--*j]}"
+Output: true
