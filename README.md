@@ -19,6 +19,8 @@ Please compare pros and cons of the following options:
 
 Please mention when each item is preferred.
 
+**Answer**:
+
 ## Question 2 (20 Points. Easy)
 
 Given a vector of integer *input*, and an integer *sum*, return a set with some inner sets, which are the numbers in *input* such that they can add up to sum. Function is defined as ```std::set<std::set<int>> twoSum(std::vector<int>& input, int sum)```
