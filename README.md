@@ -366,7 +366,8 @@ If the value of ​i ​is greater than the size of your vector then you should 
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options:
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -378,7 +379,7 @@ Output: 10
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
 Please choose any of the following options:
- 1. What is the first element?
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location? 5. Exit.
@@ -389,7 +390,8 @@ Output: 40
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options: 
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -400,7 +402,8 @@ Output: 40
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options:
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -412,7 +415,8 @@ Output: 100
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options:
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -425,7 +429,8 @@ Output: Sorry! You cannot traverse 3 elements from your current location.
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options: 
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -437,7 +442,8 @@ Output: 100
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options:
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -448,7 +454,8 @@ Output: 10
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options: 
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -460,7 +467,8 @@ Output: 10
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options: 
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
@@ -472,7 +480,8 @@ Output: 40
 ********************************************************************* *
 Vector: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 ********************************************************************* *
-Please choose any of the following options: 1. What is the first element?
+Please choose any of the following options: 
+1. What is the first element?
 2. What is the last element?
 3. What is the current element?
 4. What is the ith element from the current location?
