@@ -102,7 +102,7 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q4_student_test
 ```
 
-## Question 5 (15 Points. Easy)
+## Question 5 (20 Points. Medium)
 Write a class to implement how complex number works in mathematics. A complex number can be expressed 
 as **a+bi**, where a and b are real numbers. You are given an incomplete class `Complex`
 ```c++
@@ -115,7 +115,8 @@ class Complex{
 ```
 Tasks:
 - implement a constructor that takes the initial real and imaginary number as 2 parameters.
-- implement a copy constructor 
+- implement a copy constructor.
+- implement an assignment constructor.
 - the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.

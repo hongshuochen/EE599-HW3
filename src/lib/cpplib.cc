@@ -55,6 +55,7 @@ std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int>
 
 // implement a copy constructor
 
+// implement an assignment operator
 
 
 //q5_1 complex++

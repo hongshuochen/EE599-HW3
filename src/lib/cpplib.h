@@ -52,6 +52,8 @@ class Complex{
   // implement constructor that takes 2 numbers as input parameters
 
   // implement a copy constructor
+
+  // implement an assignment operator
   
   // define real and imaginary part
   float real;
