@@ -185,7 +185,7 @@ Delete Student_shallow!
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
-Please create your test cases and run the following command to verify the functionality of your program.
+Please create your test cases and run the following command to verify the functionality of your program. You don't need to test the destructor.
 ```
 bazel test tests:q4_student_test
 ```
@@ -229,7 +229,7 @@ bazel test tests:q5_student_test
 ```
 
 ## Question 6 (20 Points. Medium)
-Given an expression string, find if the input has valid brackets (i.e. { } or [ ] or ( ) ).
+Given an expression string, find if the input has valid brackets (i.e. { } or [ ] or ( ) ). Function is defined as ```bool​ ​CheckValidExpression​(​const​ ​string​&​ ​a​)```
 
 An input expression is valid if:
 
@@ -269,6 +269,9 @@ Write a test using GTest for your finction in [tests/q6_student_test.cc](tests/q
 ```
 bazel test tests:q6_student_test
 ```
+Please compute the time complexity of your implementation.
+
+Answer:
 ## Optional Question
 
 The goal of this section is to introduce you to more challenging questions and some common problems in coding and algorithms.

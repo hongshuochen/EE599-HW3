@@ -16,7 +16,6 @@ SinglyLinkedList::SinglyLinkedList() {
 // Question 4
 
 
-
 // Question 5
 
 //q5_0

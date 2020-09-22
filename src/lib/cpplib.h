@@ -14,7 +14,6 @@ using namespace std;
  */
 class CPPLib {
  public:
-
   //q2
   std::set<std::set<int>> twoSum(std::vector<int>& input, int sum);
 
