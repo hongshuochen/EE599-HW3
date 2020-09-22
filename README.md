@@ -25,10 +25,10 @@ Answer:
 
 Given a vector of integer *input*, and an integer *sum*, return a set of sets {a,b}, where a,b are in the input vector and a+b = sum, which are the numbers in *input* such that they can add up to sum. Function is defined as ```std::set<std::set<int>> twoSum(std::vector<int>& input, int sum)```
 
-- you may assume the vector input doesn't contain duplicated numbers.
+- you can assume the vector input doesn't contain duplicated numbers.
 - you can only use numbers in vector once.
 - if there is no answer, the output should return an empty set.
-- you may return **all** results in the input vector if there are multiple answers.
+- you should return **all** results in the input vector if there are multiple answers.
 - **Hint**: you may try unordered_map.
 - Examples:
 
@@ -37,7 +37,7 @@ Given a vector of integer *input*, and an integer *sum*, return a set of sets {a
   - input = {1,5,4,10}, sum = 200, output = {}
 
 Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
-Please create your test cases and run the following command to verify the functionality of your program.
+Please create your test cases and run the following command to verify the functionality of your program.And what's your function's **time complexity**?
 ```
 bazel test tests:q2_student_test
 ```
