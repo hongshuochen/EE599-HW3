@@ -27,7 +27,6 @@ SinglyLinkedList::SinglyLinkedList() {
 
 // implement an assignment operator
 
-
 //q5_1 complex++
 
 //q5_2 --complex
@@ -38,7 +37,7 @@ SinglyLinkedList::SinglyLinkedList() {
 
 //q5_5 complex1 += complex2
 
-//q5_6 complex2 -= complex2
+//q5_6 complex2 += (an float number)
 
 // Question 6
 
