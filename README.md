@@ -41,6 +41,7 @@ Please create your test cases and run the following command to verify the functi
 ```
 bazel test tests:q2_student_test
 ```
+Please compute the time complexity of your implementation.
 
 Answer:
 
@@ -107,12 +108,13 @@ Please create your test cases and run the following command to verify the functi
 ```c++
 bazel test tests:q3_student_test
 ```
+Please compute the time complexity of your implementation.
 
 Answer:
 
 ## Question 4 (10 Points. Easy)
 
-Write 2 classes to practice how to use the constructor, copy constructor, assign operators and destructor and compare the deep copy with shallow copy.
+Write 2 classes to practice how to use the constructor, copy constructor, copy assign operator and destructor and compare the deep copy with shallow copy.
 
 Both of the Student_shallow and Student_deep has one member integer pointer id.
 
@@ -203,7 +205,7 @@ class Complex{
 Tasks:
 1. implement a constructor that takes the initial real and imaginary number as 2 parameters.
 2. implement a copy constructor.
-3. implement an assignment operator.
+3. implement a copy assignment operator.
 4. the class will support '++' (as postfix) and '--' (as prefix) operators.
   - `complex++` should increase the real part by 1. 
   - `--complex` should decrease the real part by 1.
@@ -341,22 +343,22 @@ Convert the SinglyLinkedList class to DoublyLinkedList class, where each node po
 
 Write a program that takes a vector as a parameter, prints it, and then depending upon the user input, it performs various operations on a vector using an iterator and iterator functions.
 
-- Your code should have a variable to track the ​current location​ which will be pointing at the first element of the vector as soon as you start execution of your code and changes as the program runs.
+- Your code should have a variable to track the current location which will be pointing at the first element of the vector as soon as you start execution of your code and changes as the program runs.
 - You should print a menu to the user to perform the following operations.
 
-Example input vector: [​10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+Example input vector: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 Menu:
 
-1. What is the ​first​ element?
+1. What is the first element?
 
-Once this is selected, the ​first​ element should be printed and the current location should be set to the ​first​ element.
+Once this is selected, the first element should be printed and the current location should be set to the first element.
 
-2. What is the ​last​ element?
+2. What is the last element?
 
-Once this is selected, the ​last​ element should be printed and the current location should be set to the ​last​ element.
+Once this is selected, the last element should be printed and the current location should be set to the last element.
 
-3. What is the ​current element​?
+3. What is the current element?
 
 This should print the value at the current location. See examples below.
 
@@ -364,12 +366,12 @@ This should print the value at the current location. See examples below.
 
 Once this is selected, the code should print the value at the current location.
 
-If the value of ​i ​is negative then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be negative”)
+If the value of i is negative then you should prompt an appropriate message to the user and should prompt the menu options again. (Eg: “Value of i cannot be negative”)
 
-If the value of ​i ​is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again​. (Eg: “Value of i cannot be greater than the size of vector”)
+If the value of i is greater than the size of your vector then you should prompt an appropriate message to the user and should prompt the menu options again. (Eg: “Value of i cannot be greater than the size of vector”)
 5. Exit.
 
-- Your code should do this until the user enters “​5​”, which is “​Exit​”. When the user selects 5​ you should print “​Exit​!” and end the execution.
+- Your code should do this until the user enters “5”, which is “Exit”. When the user selects 5 you should print “Exit!” and end the execution.
 - GTests are NOT required for this question.
 - Submit your code, along with a sample text file of the output for this input vector:
   - [1, 4, 5, 23, 100, 12, 18, 175]
