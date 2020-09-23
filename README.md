@@ -136,7 +136,6 @@ public:
     int* id;
     Student_shallow();
     Student_shallow(int);
-    ~Student_shallow();
 };
 class Student_deep
 {
