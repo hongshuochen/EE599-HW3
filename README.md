@@ -119,12 +119,11 @@ Write 2 classes to practice how to use the constructor, copy constructor, copy a
 Both of the Student_shallow and Student_deep has one member integer pointer id.
 
 - Student_shallow
-  - Write a **default constructor** to initialize id to 0
+  - Write a **default constructor** to allocate and initialize id to 0
   - Write a **parameterized constructor** to initialize id
-  - Write a **destructor** to print "Delete Student_shallow!"
 
 - Student_deep
-  - Write a **default constructor** to initialize id to 0
+  - Write a **default constructor** to allocate and initialize id to 0
   - Write a **parameterized constructor** to initialize id
   - Write a **destructor** to print "Delete Student_deep!" and delete the integer pointer
   - Write a **copy constructor** with **deep copy**
