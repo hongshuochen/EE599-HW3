@@ -177,9 +177,6 @@ Exepcted output:
 Delete Student_deep!
 Delete Student_deep!
 Delete Student_deep!
-Delete Student_shallow!
-Delete Student_shallow!
-Delete Student_shallow!
 ```
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
