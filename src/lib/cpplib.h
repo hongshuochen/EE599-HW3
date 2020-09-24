@@ -62,6 +62,8 @@ public:
   ListNode* GetIthPointer(int i);//returns pointer to ith element
 
   void print();//prints the list: ex. Empty list: { }. List with Items: {1, 2, 3}
+ 
+  void reverse(); // reverse the linked list in-place
 
   ListNode *head_;//Pointer to the first element
 
