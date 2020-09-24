@@ -53,9 +53,10 @@ public:
 
   void pop_back();//remove the last item
 
-  int back();//returns the value of last item
+  // back() and front() are optional now
+  // int back();//returns the value of last item
 
-  int front();//returns the value of first item
+  // int front();//returns the value of first item
 
   ListNode* GetBackPointer();//returns the pointer to the last item
 
