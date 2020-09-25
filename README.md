@@ -99,7 +99,7 @@ public:
 
 You can assume that the Linked List is **acyclic** except for the constructor ```SinglyLinkedList(vector<int> &input, int i);```.
 
-All functions except for print() require a GTest.
+All functions except for print()/constructor/destructor require a GTest.
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
